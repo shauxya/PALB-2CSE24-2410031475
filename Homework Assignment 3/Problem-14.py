@@ -1,3 +1,4 @@
+#PALB-2CSE24-2410031475
 def find_duplicate(nums):
     slow = nums[0]
     fast = nums[0]
