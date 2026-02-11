@@ -1,3 +1,4 @@
+#PALB-2CSE24-2410031475
 def get_min_diff(arr, k):
     n = len(arr)
     arr.sort()
