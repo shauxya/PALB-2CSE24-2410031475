@@ -23,4 +23,4 @@ print(get_min_diff(arr1, k1))
 
 arr2 = [3, 9, 12, 16, 20]
 k2 = 3
-print(get_min_diff(arr2, k2))   
+print(get_min_diff(arr2, k2))
