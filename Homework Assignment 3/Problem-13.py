@@ -1,3 +1,4 @@
+#PALB-2CSE24-2410031475
 def min_jumps(arr):
     n = len(arr)
     if n == 1:
