@@ -1,20 +1,32 @@
 #PALB-2CSE24-2410031475
-def factorial(n):
-    result = [1]
+arr1 = [1, 5, 10, 20, 40, 80]
+arr2 = [6, 7, 20, 80, 100]
+arr3 = [3, 4, 15, 20, 30, 70, 80, 120]
 
-    for x in range(2, n + 1):
-        carry = 0
-        for i in range(len(result)):
-            prod = result[i] * x + carry
-            result[i] = prod % 10
-            carry = prod // 10
+i = j = k = 0
+n1 = len(arr1)
+n2 = len(arr2)
+n3 = len(arr3)
 
-        while carry:
-            result.append(carry % 10)
-            carry //= 10
+result = []
 
-    return result[::-1]
+while i < n1 and j < n2 and k < n3:
+    if arr1[i] == arr2[j] == arr3[k]:
+        if not result or result[-1] != arr1[i]:
+            result.append(arr1[i])
+        i += 1
+        j += 1
+        k += 1
+    else:
+        minimum = min(arr1[i], arr2[j], arr3[k])
+        if arr1[i] == minimum:
+            i += 1
+        elif arr2[j] == minimum:
+            j += 1
+        else:
+            k += 1
 
-
-n = 5
-print(factorial(n))
+if result:
+    print(result)
+else:
+    print([-1])
