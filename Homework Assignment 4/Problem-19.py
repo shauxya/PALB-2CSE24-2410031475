@@ -1,21 +1,25 @@
 #PALB-2CSE24-2410031475
-class Solution:
-    def isSubset(self, a, b):
-        freq = {}
+def tripletSum(arr, target):
+    arr.sort()
+    n = len(arr)
 
-        for x in a:
-            freq[x] = freq.get(x, 0) + 1
+    for i in range(n - 2):
+        left = i + 1
+        right = n - 1
 
-        for x in b:
-            if x not in freq or freq[x] == 0:
-                return False
-            freq[x] -= 1
+        while left < right:
+            total = arr[i] + arr[left] + arr[right]
 
-        return True
+            if total == target:
+                return True
+            elif total < target:
+                left += 1
+            else:
+                right -= 1
+
+    return False
 
 
-a = [11, 7, 1, 13, 21, 3, 7, 3]
-b = [11, 3, 7, 1, 7]
-
-obj = Solution()
-print(obj.isSubset(a, b))
+print(tripletSum([1, 4, 45, 6, 10, 8], 13))
+print(tripletSum([1, 2, 4, 3, 6, 7], 10))
+print(tripletSum([40, 20, 10, 3, 6, 7], 24))
