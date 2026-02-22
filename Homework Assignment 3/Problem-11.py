@@ -1,12 +1,8 @@
 #PALB-2CSE24-2410031475
-import heapq
+def kthSmallest(arr, k):
+    arr.sort()
+    return arr[k-1]
 
-def kth_smallest(arr, k):
-    heapq.heapify(arr)
-    for _ in range(k - 1):
-        heapq.heappop(arr)
-    return heapq.heappop(arr)
-
-arr = [7, 10, 4, 3, 20, 15]
-k = 3
-print(kth_smallest(arr, k))
+arr = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10]
+k = 4
+print(kthSmallest(arr, k))
