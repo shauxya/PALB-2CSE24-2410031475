@@ -33,4 +33,4 @@ sol = Solution()
 
 print(sol.find3Numbers(arr1, target1)) 
 
-print(sol.find3Numbers(arr2, target2)) 
+print(sol.find3Numbers(arr2, target2))
