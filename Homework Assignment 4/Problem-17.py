@@ -1,3 +1,4 @@
+#PALB-2CSE24-2410031475
 def common_elements(arr1, arr2, arr3):
     n1, n2, n3 = len(arr1), len(arr2), len(arr3)
     i = j = k = 0
