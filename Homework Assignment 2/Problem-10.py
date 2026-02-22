@@ -27,4 +27,5 @@ def min_jumps(arr):
     return -1
 
 arr = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
-print(min_jumps(arr))
+
+print(min_jumps(arr)) 
