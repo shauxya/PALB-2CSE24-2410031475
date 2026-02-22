@@ -1,3 +1,4 @@
+#PALB-2CSE24-2410031475
 def merge_intervals(intervals):
     if not intervals:
         return []
